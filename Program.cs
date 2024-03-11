@@ -5,6 +5,11 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+// Add this using statement at the top of your file
+using Microsoft.Extensions.Configuration;
+
+// Inside your class or method
+var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
 var builder = WebApplication.CreateBuilder(args);
 
