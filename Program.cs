@@ -9,11 +9,14 @@ using ImageGalleryApi.Data; // Replace with the namespace where your DbContext i
 public class Program
 {
     public static void Main(string[] args)
+
+    
     {
         var host = CreateHostBuilder(args).Build();
         // Add this line in your code (not recommended for production)
         System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
 
+      
 
         // Apply database migrations on startup
         using (var scope = host.Services.CreateScope())
@@ -43,6 +46,7 @@ public class Startup
         Configuration = configuration;
     }
 
+    
     public IConfiguration Configuration { get; }
 
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -54,6 +58,19 @@ public class Startup
 
         // Add controllers
         services.AddControllers();
+
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll",
+                builder =>
+                {
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +82,7 @@ public class Startup
         }
 
         app.UseRouting();
+        app.UseCors("AllowAll");
 
         app.UseEndpoints(endpoints =>
         {
