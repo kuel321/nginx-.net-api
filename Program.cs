@@ -11,6 +11,9 @@ public class Program
     public static void Main(string[] args)
     {
         var host = CreateHostBuilder(args).Build();
+        // Add this line in your code (not recommended for production)
+        System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
+
 
         // Apply database migrations on startup
         using (var scope = host.Services.CreateScope())
