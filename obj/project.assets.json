@@ -3178,19 +3178,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/lukeshort/.nuget/packages/": {}
+    "/home/luke/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lukeshort/nginx-.net-api/dotnet-api.csproj",
+      "projectUniqueName": "/home/luke/dotnet-api/dotnet-api.csproj",
       "projectName": "dotnet-api",
-      "projectPath": "/Users/lukeshort/nginx-.net-api/dotnet-api.csproj",
-      "packagesPath": "/Users/lukeshort/.nuget/packages/",
-      "outputPath": "/Users/lukeshort/nginx-.net-api/obj/",
+      "projectPath": "/home/luke/dotnet-api/dotnet-api.csproj",
+      "packagesPath": "/home/luke/.nuget/packages/",
+      "outputPath": "/home/luke/dotnet-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/lukeshort/.nuget/NuGet/NuGet.Config"
+        "/home/luke/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3255,7 +3255,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/236/sdk/8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
